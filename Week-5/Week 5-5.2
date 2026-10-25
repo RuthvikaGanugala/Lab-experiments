@@ -1,40 +1,18 @@
-include <stdio.h>
-
-void main()
+#include <stdio.h>
+int main()
 {
-    int n1, n2, n3;
-    char op;
+    int units;
+    float bill;
+    printf("Enter units consumed: ");
+    scanf("%d", &units);
+    if (units <= 100)
+        bill = units * 1.50;
+    else if (units <= 200)
     
-    printf("Enter n1, n2 value");
-    scanf("%d%d", &n1, &n2);
-    
-    printf("Enter the operator (+, -, *, /, %): ");
-    scanf(" %c", &op);
-    
-    switch(op)
-    {
-        case '+':
-            printf("\n%d + %d = %d", n1, n2, n1 + n2);
-            break;
-            
-        case '-':
-            printf("\n%d - %d = %d", n1, n2, n1 - n2);
-            break;
-            
-        case '*':
-            printf("\n%d * %d = %d", n1, n2, n1 * n2);
-            break;
-            
-        case '/':
-            printf("\n%d / %d = %d", n1, n2, n1 / n2);
-            break;
-            
-        case '%':
-            printf("\n%d %% %d = %d", n1, n2, n1 % n2);
-            break;
-            
-        default:
-            printf("wrong output");
-    }
+        bill = units * 2.50;
+    else if (units <= 500)
+        bill = units * 4.00;
+    else
+        bill = units * 6.00;
+    printf("Total electricity bill = Rs. %.2f\n", bill);
 }
-
