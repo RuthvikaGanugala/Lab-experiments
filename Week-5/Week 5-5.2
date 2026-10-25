@@ -1,1 +1,40 @@
+include <stdio.h>
+
+void main()
+{
+    int n1, n2, n3;
+    char op;
+    
+    printf("Enter n1, n2 value");
+    scanf("%d%d", &n1, &n2);
+    
+    printf("Enter the operator (+, -, *, /, %): ");
+    scanf(" %c", &op);
+    
+    switch(op)
+    {
+        case '+':
+            printf("\n%d + %d = %d", n1, n2, n1 + n2);
+            break;
+            
+        case '-':
+            printf("\n%d - %d = %d", n1, n2, n1 - n2);
+            break;
+            
+        case '*':
+            printf("\n%d * %d = %d", n1, n2, n1 * n2);
+            break;
+            
+        case '/':
+            printf("\n%d / %d = %d", n1, n2, n1 / n2);
+            break;
+            
+        case '%':
+            printf("\n%d %% %d = %d", n1, n2, n1 % n2);
+            break;
+            
+        default:
+            printf("wrong output");
+    }
+}
 
